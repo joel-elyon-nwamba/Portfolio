@@ -1,5 +1,5 @@
 body {
-    background-color: #27CFF5;
+    background-color: #B657D9;
     font-family: "Tilt Prism", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -37,9 +37,3 @@ body {
     font-weight: 700;
     text-decoration: underline;
 }  
-
-.main-intro {
-    text-align: center;
-    padding: 100px 20px;
-    color: #fff;
-}

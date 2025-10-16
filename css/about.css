@@ -1,5 +1,5 @@
 body {
-    background-color: #27CFF5;
+    background-color: #ED811C;
     font-family: "Tilt Prism", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -38,7 +38,7 @@ body {
     text-decoration: underline;
 }  
 
-.main-intro {
+.about-section {
     text-align: center;
     padding: 100px 20px;
     color: #fff;
