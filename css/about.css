@@ -43,3 +43,20 @@ body {
     padding: 100px 20px;
     color: #fff;
 }
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
