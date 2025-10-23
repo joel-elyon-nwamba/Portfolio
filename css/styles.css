@@ -1,6 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #27CFF5;
-    height: 1000px;
+    min-height: 100vh;
     animation-name: colorChange;
     animation-duration: 80s;
     animation-iteration-count: infinite;
@@ -57,19 +63,63 @@ body {
 }  
 
 .main-intro {
-    animation-name: upDown;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
+    animation: textPop 0.5s ease-out forwards;
     text-align: center;
     padding: 100px 20px;
+    font-size: 2.5rem;
     color: #fff;
 }
 
-@keyframes upDown {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+.main-intro .main-title ol {
+    list-style: none;
+    padding: 0;
+    height: 4.8rem;
+    overflow: hidden;
+}
+
+.main-intro .main-title ol li {
+    animation: slide-up 12s infinite;
+}
+
+@keyframes slide-up {
+    0%, 10% {
+        transform: translateY(0%);
+    }
+    15%, 25% {
+        transform: translateY(-100%);
+    }
+    30%, 40% {
+        transform: translateY(-200%);
+    }
+    45%, 55% {
+        transform: translateY(-300%);
+    }
+    60%, 70% {
+        transform: translateY(-400%);
+    }
+    75%, 100% {
+        transform: translateY(0%);
+    }
+}
+
+.main-intro .main-title ol li span {
+    height: 0.8rem;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+@keyframes textPop {
+  0% {
+    transform: scale(0.8); /* Slightly smaller initially */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2.0); /* Larger than normal, creating the "pop" */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1); /* Returns to normal size */
+  }
 }
 
 .logo {
