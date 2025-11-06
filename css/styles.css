@@ -148,3 +148,66 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+@media (max-width: 768px) {
+    .main-intro {
+        font-size: 1.8rem;
+        padding: 80px 10px;
+    }
+
+    .nav-list {
+        gap: 15px;
+    }
+
+    .nav-item a {
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width: 480px) {
+
+    .main-intro {
+        font-size: 1.5rem;
+        padding: 60px 5px;
+    
+    .nav-list {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        font-size: 3rem;
+        transition: right 0.3s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding-top: 60px;
+        gap: 10px;
+    }
+    .nav-list.active {
+        right: 0;
+}
+
+nav {
+    display: flex;
+
+}
+
+.ham-menu {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+}
+
+    .nav-item a {
+        font-size: 0.875rem;
+    }
+}   
+}
