@@ -39,12 +39,25 @@ body {
 
 
 
+/* HEADER LAYOUT */
 .header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 
+/* Hide hamburger by default (desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Nav desktop */
 .nav-links {
     margin-right: 20px;
 }
@@ -53,15 +66,6 @@ body {
     display: flex;
     list-style: none;
     gap: 20px;
-}
-
-.nav-item a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    font-size: 1.25rem;
-    cursor: pointer;
 }
 
 
@@ -165,49 +169,43 @@ footer {
 
 }
 
-@media(max-width: 480px) {
+ @media (max-width: 480px) {
+    .header-nav {
+        position: relative;
+    }
 
-    .main-intro {
-        font-size: 1.5rem;
-        padding: 60px 5px;
-    
+    /* Show hamburger on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide nav by default on mobile */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;          /* below header */
+        right: 20px;
+        background: #ffff;
+        padding: 10px 15px;
+        border-radius: 8px;
+    }
+
+    /* When menu is open */
+    .nav-links.nav-open {
+        display: block;
+    }
+
     .nav-list {
-        height: 100vh;
         display: flex;
         flex-direction: column;
+        font-size: 0.2rem;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        width: 100%;
-        max-width: 450px;
-        position: fixed;
-        top: 0;
-        right: -450px;
-        font-size: 3rem;
-        transition: right 0.3s ease-in-out;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding-top: 60px;
         gap: 10px;
     }
-    .nav-list.active {
-        right: 0;
-}
-
-nav {
-    display: flex;
-
-}
-
-.ham-menu {
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-    margin-left: auto;
-    position: relative;
-}
 
     .nav-item a {
-        font-size: 0.875rem;
+        font-size: 1rem;
+        display: block;
     }
-}   
 }

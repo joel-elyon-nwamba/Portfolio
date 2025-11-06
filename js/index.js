@@ -1,29 +1,6 @@
-import openAI from "openai"
+const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-
-
-const release = () => {
-    const messages = [
-        {
-            role: "system",
-            content: ""
-        },
-        {
-            role: "user",
-            content: " "
-        }
-    ]
-    try {
-        const openai = new openAI({
-        
-        })
-
-        const response = await openai.chat.completions.create({
-            model: "gpt-5",
-            messags: messages
-        })
-
-    } catch(err) {
-
-    }
-}
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-open');
+  });
