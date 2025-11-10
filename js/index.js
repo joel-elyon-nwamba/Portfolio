@@ -1,6 +1,6 @@
-const toggleBtn = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-  toggleBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-open');
-  });
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
