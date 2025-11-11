@@ -13,6 +13,24 @@ body {
     align-items: center;
 }
 
+.hamburger{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
 .nav-links {
     margin-right: 20px;
 }
